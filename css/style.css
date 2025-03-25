@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap');
+
+/*
+Fonts:
+-Title 
+font-family: "Rubik Dirt", system-ui;
+-subtitle
+font-family: "Rubik Bubbles", system-ui;
+-text
+font-family: "Chau Philomene One", sans-serif;
+*/
+
+/* Colors
+#00309D
+#C00000
+#000000
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* p{
+    font-family: "Chau Philomene One", sans-serif;
+    font-style: normal;
+} */
+
+/* h1{
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-size: 3rem;
+} */
+
+/* Navbar */
+
+.navbar, .nav-flex, .nav-ul-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #e6e6e6;
+    position: fixed;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+.navbar img {
+    height: 64px;
+    width: 64px;
+    margin: auto 10px;
+}
+
+.navbar nav {
+    justify-content: center;
+    flex-grow: 1;
+    
+}
+
+.navbar nav ul {
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar nav ul li a{
+    font-family: "Chau Philomene One", sans-serif;
+    text-decoration: none;
+    color: #00309D;
+}
+
+
+/* MAIN GRID BODY */
+
+.body-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px 300px 200px 80px 440px 80px 440px;
+    column-gap: 20px;
+}
+
+
+/* Section Banner 6 Categories */
+
+.section-banner {
+    grid-column: 2/12;
+    grid-row: 2/3;
+}
+
+.section-banner img {
+    display: inline-block;  /* remover cuando se tenga la imagen */
+    border: 1px solid black;
+    background-color: bisque;
+    height: 290px; 
+    width: 100%;
+}
+
+.section-ban-cat{
+    grid-column: 2/12;
+    grid-row: 3/4;
+    width: 60%;
+    justify-items: center;
+    justify-self: center;
+}
+
+.section-ban-cat h1 {
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.section-ban-cat img{
+    display: inline-block;
+    border: 1px solid black;
+    background-color: bisque; /* remover cuando se tenga la imagen */
+    height: 80px;
+    width: 80px;
+}
+
+.div-ban-cat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.section-cat1 h2, .section-cat2 h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 300;
+    font-size: 48px;
+    margin: auto 0px;
+    height: 80px;
+    background-color: #c00000;
+    width: 95%;
+    color: white;
+    justify-self: center;
+}
+
+.section-cat1 {
+    grid-column: 1/13;
+    grid-row: 4/6;
+}
+
+.section-cat2 {
+    grid-column: 1/13;
+    grid-row: 6/8;
+}
+
+.section-div-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 440px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cat-cards {
+    background-color: bisque;
+    text-align: center;
+    border-radius: 8px;
+    width: 248px;
+    height: 320px;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.26);
+    
+}
+
+.cat-cards img {
+    width: 196px;
+    height: 196px;
+    margin: 10px auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.div-cards-desc {
+    display: grid;
+    width: 90%;
+    margin: 0px auto;
+    gap: 5px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 25px 50px;
+    grid-template-areas: 
+    "cards-title cards-price"
+    "cards-desc cards-price";
+    align-items: center;
+    text-align: left;
+}
+
+.cards-title {
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 16px;
+    font-weight: 100;
+    grid-area: cards-title;
+}
+
+.cards-desc {
+    font-family: "Chau Philomene One", sans-serif;
+    font-size: 14px;
+    height: 100%;
+    overflow-y: hidden;
+    grid-area: cards-desc;
+    align-items: first baseline;
+}
+
+.cards-price {
+    grid-area: cards-price;
+    text-align: center;
+}
+
+/* footer */
+
+.footer{
+    background-color: #00309D;
+    height: auto;
+}
+
+.footer-title{
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 2rem;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.div-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-logo{
+    height: 64px;
+    width: 64px;
+    margin: 0px 40px 20px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 1px rgb(255, 252, 252)) ;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.footer-links li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+}
+
+.material-symbols-outlined{
+    padding: 3px;
+    margin: 5px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
