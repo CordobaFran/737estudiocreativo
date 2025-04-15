@@ -1,0 +1,54 @@
+@use "../utilities/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap');
+
+$desktop-l : 24px;
+$desktop-m : 18px;
+$desktop-s : 16px;
+$desktop-xs : 14px;
+
+$tablet-l : 24px;
+$tablet-m : 18px;
+$tablet-s : 14px;
+
+$mobile-l : 24px;
+$mobile-m : 18px;
+$mobile-s : 14px;
+
+@mixin navbar-font-regular ( $size, $color ) {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin desktop-title ( $color ) {
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 100;
+    font-size: 64;
+    color: $color;
+}
+
+@mixin desktop-text ( $size, $color ) {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 100;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin tablet-text ( $size, $color ) {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 100;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin mobile-text ( $size, $color ) {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 100;
+    font-size: $size;
+    color: $color;
+}
+
+

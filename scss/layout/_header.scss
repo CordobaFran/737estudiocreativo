@@ -1,0 +1,91 @@
+@use "../utilities/variables" as *;
+@use "../base/typography" as *;
+@use "../base/media" as *;
+
+
+header{
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $navbarbkg;
+        height: 80px;
+        filter: drop-shadow(0px 5px 5px #00000033);
+
+        @include mobile{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: auto;
+        }
+
+        a{
+            margin: auto 10px;
+            img{
+                height: 64px;
+                width: 64px;
+            }
+        }
+
+        #toggle-menu{
+            display: none;  
+        }
+
+        label {
+            @extend #toggle-menu;
+            padding:0px 10px;
+            @include mobile{
+                display: inline-flex;
+                text-align: right;
+            }   
+            
+        }
+        
+        #toggle-menu:checked ~ .div-menu {
+            height: 190px;
+            transition: height 200ms;
+        }
+        .div-menu{
+            margin: auto auto;
+            // justify-items: center;
+            // align-content: center;
+            // flex-grow: 1;
+
+            @include mobile{
+                width: 100%;
+                height: 0;
+                transition: height 200ms;
+                overflow: hidden;
+            }
+
+            .div__ul-menu{ 
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+
+                @include mobile{
+                    flex-direction: column;
+                }
+
+                li{
+                    text-align: center;
+                    width: 100px;
+                    padding: 10px;
+
+                    @include tablet{
+                        width: auto;
+                    }
+                    a{
+                        @include navbar-font-regular ($desktop-m, $bluepalette);
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+

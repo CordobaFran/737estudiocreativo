@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *;
+@use "../base/typography" as *;
+
+p {
+    @include desktop-text ($desktop-s, $fontblack);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    .container__body {
+        grid-column: 2/6 ;
+        
+        .title__div {
+            background-color: $bluepalette;
+            align-content: center;
+            width: 100%;
+            height: 200px;
+            h1 {
+                @include desktop-title($fontwhite);
+                color: $fontwhite;
+                padding-left: 20px;
+            }
+        }
+        .section__description {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 300px;
+            img {
+                grid-column: 1/2;
+                width: 128px;
+                height: 128px;
+                margin: auto auto;
+            }
+            p {
+                grid-column: 2/5;
+                margin: auto auto;
+            }
+        }
+        .section__nosotros {
+            height: 324px;
+            align-content: center;
+                h2 {
+                    margin: 20px auto;
+            }
+        }    
+    }
+}

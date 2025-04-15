@@ -1,93 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Rubik+Bubbles&family=Rubik+Dirt&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-/*
-Fonts:
--Title 
-font-family: "Rubik Dirt", system-ui;
--subtitle
-font-family: "Rubik Bubbles", system-ui;
--text
-font-family: "Chau Philomene One", sans-serif;
-*/
+.container {
+  height: 100vh;
+  padding-bottom: 120px;
+}
 
-/* Colors
-#00309D
-#C00000
-#000000
-*/
-h1, h2 {
-    font-family: "Rubik Dirt", system-ui;
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f3f3f3;
+  height: 80px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 480px) {
+  header nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+  }
+}
+header nav a {
+  margin: auto 10px;
+}
+header nav a img {
+  height: 64px;
+  width: 64px;
+}
+header nav #toggle-menu, header nav label {
+  display: none;
+}
+header nav label {
+  padding: 0px 10px;
+}
+@media (max-width: 480px) {
+  header nav label {
+    display: inline-flex;
+    text-align: right;
+  }
+}
+header nav #toggle-menu:checked ~ .div-menu, header nav label:checked ~ .div-menu {
+  height: 190px;
+  transition: height 200ms;
+}
+header nav .div-menu {
+  margin: auto auto;
+}
+@media (max-width: 480px) {
+  header nav .div-menu {
+    width: 100%;
+    height: 0;
+    transition: height 200ms;
+    overflow: hidden;
+  }
+}
+header nav .div-menu .div__ul-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+@media (max-width: 480px) {
+  header nav .div-menu .div__ul-menu {
+    flex-direction: column;
+  }
+}
+header nav .div-menu .div__ul-menu li {
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  header nav .div-menu .div__ul-menu li {
+    width: auto;
+  }
+}
+header nav .div-menu .div__ul-menu li a {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 18px;
+  color: #00309D;
+}
+header nav .div-menu .div__ul-menu li a:hover {
+  font-weight: bold;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 80px;
+  background-color: #00309D;
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 768px) {
+  footer {
+    grid-template-rows: 30px 1fr;
+    height: 185px;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+footer h4 {
+  text-align: center;
+  grid-row: auto;
+  margin: auto 0px;
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  footer h4 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: "Chau Philomene One", sans-serif;
     font-weight: 100;
+    font-size: 24px;
+    color: #ffffff;
+  }
 }
-body {
-    background-image: linear-gradient(to right top, #d1d7e0, #dddce5, #e8e2e9, #f2e8ec, #f9efef);  
+footer .footer__div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100%;
+  grid-template-areas: "img link link link link link";
 }
-
-.nav-navbar {
-    height: 80px;
-    width: 100%;
+@media (max-width: 768px) {
+  footer .footer__div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
-
-.nav-navbar ul li {
-    width: 100px;
+@media (max-width: 480px) {
+  footer .footer__div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
-
-.a__navbar-logo {
-    width: 64px;
-    height: 64px;
+footer .footer__div .footer__div-logo {
+  grid-area: img;
+  margin: 0px auto;
+  height: 64px;
+  width: 64px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  align-self: center;
 }
-
-.a__navbar-logo img{
-    width: 100%;
+@media (max-width: 768px) {
+  footer .footer__div .footer__div-logo {
+    margin: 15px auto;
+  }
 }
-
-.section__banner div div img {
-    height: 290px;
-    border: 1px solid black;
+@media (max-width: 480px) {
+  footer .footer__div .footer__div-logo {
+    margin: 15px auto;
+  }
 }
-
-.section__banner__div {
-    margin-top: 124px;
+footer .footer__div .footer__div-links {
+  grid-area: link;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
 }
-
-.section__banner .carousel-control-prev{
-    margin-left: 12.5%;
-}
-
-.section__banner .carousel-control-next{
-    margin-right: 12.5%;
-}
-
-.section__div-bancat img {
-    width: 80px;
-    height: 80px;
-}
-
-.section__div-bancat {
-    height: 80px;
-    width: 200px;
-}
-
-.section-cat h2{
-    text-align: center;
+@media (max-width: 768px) {
+  footer .footer__div .footer__div-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: auto auto;
-    background-color: #00309D;
-    height: 80px;
-    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  footer .footer__div .footer__div-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 0px;
+  }
+}
+footer .footer__div .footer__div-links li {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 15px;
+  align-items: center;
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  footer .footer__div .footer__div-links li {
+    margin: 10px 0px;
+  }
+}
+footer .footer__div .footer__div-links li img {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
 }
 
-.section-cat .card img {
-    height: 320px;
-    object-fit: cover;
+p {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  color: #000000;
 }
 
-.footer {
-    background-color: #00309D;
+main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+main .container__body {
+  grid-column: 2/6;
+}
+main .container__body .title__div {
+  background-color: #00309D;
+  align-content: center;
+  width: 100%;
+  height: 200px;
+}
+main .container__body .title__div h1 {
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 100;
+  font-size: 64;
+  color: #ffffff;
+  color: #ffffff;
+  padding-left: 20px;
+}
+main .container__body .section__description {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 300px;
+}
+main .container__body .section__description img {
+  grid-column: 1/2;
+  width: 128px;
+  height: 128px;
+  margin: auto auto;
+}
+main .container__body .section__description p {
+  grid-column: 2/5;
+  margin: auto auto;
+}
+main .container__body .section__nosotros {
+  height: 324px;
+  align-content: center;
+}
+main .container__body .section__nosotros h2 {
+  margin: 20px auto;
 }
 
-.footer__div-logo {
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 50%;
-}
+/*# sourceMappingURL=style.css.map */

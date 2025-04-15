@@ -1,0 +1,26 @@
+{
+  "name": "737estudio",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/CordobaFran/737estudiocreativo#readme",
+  "bugs": {
+    "url": "https://github.com/CordobaFran/737estudiocreativo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CordobaFran/737estudiocreativo.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass ./scss/style.scss ./css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "sass": "^1.86.1"
+  }
+}
