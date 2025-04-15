@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call" /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/style.css">
     <title>737estudiocreativo</title>
 </head>
 <body>
-    <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-navbar fixed-top shadow">
-            <div class="container-fluid">
-                <a class="navbar-brand a__navbar-logo" href="#">
-                    <img src="./assets/img/737logo.png" alt="navbarlogo">
+    <div class="container">
+        <header>
+            <nav>
+                <a>
+                    <img src="../assets/img/737logo.png" alt="navbarlogo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                <input type="checkbox" id="toggle-menu">
+                <label for="toggle-menu"><img src="./assets/img/icon-menu.png" alt=""></label>
+                <div class="div-menu">
+                    <ul class="div__ul-menu">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
@@ -36,163 +33,154 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="container-fluid">
-            <section class="section__banner">
-                <div id="carouselExampleAutoplaying" class="carousel slide section__banner__div" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-75 mx-auto" alt="...">
+            </nav>      
+        </header>
+        <main>
+            <div class="container-fluid">
+                <section class="section__banner">
+                    <div id="carouselExampleAutoplaying" class="carousel slide section__banner__div" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="..." class="d-block w-75 mx-auto" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-75 mx-auto" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-75 mx-auto" alt="...">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-75 mx-auto" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-75 mx-auto" alt="...">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
-            <section class="d-flex flex-column mx-auto align-items-center my-5 section-bancat w-75">
-                <h1 class="h1">CATEGORÍAS</h1>
-                <div class="d-flex justify-content-evenly mt-4 w-100 section__div-bancat">
-                    <img src="" alt="cat1" class="img-thumbnail">
-                    <img src="" alt="cat2" class="img-thumbnail">
-                    <img src="" alt="cat3" class="img-thumbnail">
-                </div>
-            </section>
-            <section class="container-fluid section-cat">
-                <h2 class="d-flex align-items-center justify-content-center text-white">PUZZLES</h2>
-                <div class="d-flex flex-wrap justify-content-evenly my-5 section__div-cards">
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/Puzzles/6bullet.jpeg" class="card-img-top" alt="...">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                </section>
+                <section class="d-flex flex-column mx-auto align-items-center my-5 section-bancat w-75">
+                    <h1 class="h1">CATEGORÍAS</h1>
+                    <div class="d-flex justify-content-evenly mt-4 w-100 section__div-bancat">
+                        <img src="" alt="cat1" class="img-thumbnail">
+                        <img src="" alt="cat2" class="img-thumbnail">
+                        <img src="" alt="cat3" class="img-thumbnail">
+                    </div>
+                </section>
+                <section class="container-fluid section-cat">
+                    <h2 class="d-flex align-items-center justify-content-center text-white">PUZZLES</h2>
+                    <div class="d-flex flex-wrap justify-content-evenly my-5 section__div-cards">
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/Puzzles/6bullet.jpeg" class="card-img-top" alt="...">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/Puzzles/7screw1nut.jpeg" class="card-img-top" alt="...">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/Puzzles/7screw1nut.jpeg" class="card-img-top" alt="...">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/Puzzles/8screws.jpeg" class="card-img-top" alt="...">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>             
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/Puzzles/8screws.jpeg" class="card-img-top" alt="...">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>             
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/Puzzles/chineseball.jpeg" class="card-img-top" alt="...">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/Puzzles/chineseball.jpeg" class="card-img-top" alt="...">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            <section class="container-fluid section-cat">
-                <h2 class="d-flex align-items-center justify-content-center text-white">POKÉMON</h2>
-                <div class="d-flex flex-wrap justify-content-evenly my-5 section__div-cards">
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/pokemon/077galarian-ponyta.jpg" class="card-img-top" alt="077galarianponyta">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                    </div>
+                </section>
+                <section class="container-fluid section-cat">
+                    <h2 class="d-flex align-items-center justify-content-center text-white">POKÉMON</h2>
+                    <div class="d-flex flex-wrap justify-content-evenly my-5 section__div-cards">
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/pokemon/077galarian-ponyta.jpg" class="card-img-top" alt="077galarianponyta">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/pokemon/077ponyta.jpg" class="card-img-top" alt="077ponyta">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/pokemon/077ponyta.jpg" class="card-img-top" alt="077ponyta">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/pokemon/056mankey.jpg" class="card-img-top" alt="056mankey">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>             
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/pokemon/056mankey.jpg" class="card-img-top" alt="056mankey">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>             
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card my-2" style="width: 18rem;">
-                            <img src="./assets/img/products/pokemon/978annihilape.jpg" class="card-img-top" alt="978annihilape">
-                            <div class="row card-body">
-                                <h5 class="col-12 card-title text-center">Card title</h5>
-                                <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <P class="col-3 cards-price align-content-center">$2500</P>
+                        </a>
+                        <a href="#">
+                            <div class="card my-2" style="width: 18rem;">
+                                <img src="./assets/img/products/pokemon/978annihilape.jpg" class="card-img-top" alt="978annihilape">
+                                <div class="row card-body">
+                                    <h5 class="col-12 card-title text-center">Card title</h5>
+                                    <p class="col-9 card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <P class="col-3 cards-price align-content-center">$2500</P>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer class="container-fluid row footer">
-        <h4 class="col-12 footer-title text-center text-white my-4">Contacto</h4>
-        <div class="col-12 row footer__div">
-            <img src="./assets/img/737logo.png" alt="footer-logo" class="col-2 footer__div-logo m-auto mb-2 p-0">
-            <ul class="d-flex col-10 justify-content-evenly align-items-center footer__div-links text-white list-unstyled">
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256"
-                    style="fill:#FFFFFF;">
-                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(16,16)"><path d="M7.5,1c-3.58594,0 -6.5,2.91406 -6.5,6.5c0,1.29688 0.41797,2.48438 1.07031,3.5l-1.11719,3.12109l3.47656,-0.98047c0.92188,0.50391 1.94531,0.85938 3.07031,0.85938c3.58594,0 6.5,-2.91406 6.5,-6.5c0,-3.58594 -2.91406,-6.5 -6.5,-6.5zM7.5,2c3.04297,0 5.5,2.45703 5.5,5.5c0,3.04297 -2.45703,5.5 -5.5,5.5c-1.04297,0 -2.00781,-0.29297 -2.84375,-0.79687l-0.18359,-0.11328l-1.92578,0.53906l0.625,-1.73437l-0.15234,-0.21094c-0.64062,-0.90234 -1.01953,-1.99609 -1.01953,-3.18359c0,-3.04297 2.45703,-5.5 5.5,-5.5zM5.0625,4c-0.11328,0 -0.30078,0.04688 -0.46094,0.23438c-0.15625,0.18359 -0.60156,0.63281 -0.60156,1.54688c0,0.91016 0.61719,1.79297 0.70313,1.91797c0.08594,0.125 1.21484,1.99609 2.94141,2.80078c0.41016,0.19141 0.73047,0.30469 0.98047,0.39063c0.41406,0.14063 0.78906,0.12109 1.08594,0.07422c0.33203,-0.05469 1.01953,-0.44922 1.16406,-0.88281c0.14063,-0.43359 0.14453,-0.80469 0.09766,-0.88281c-0.03906,-0.07812 -0.15625,-0.125 -0.32812,-0.21484c-0.17187,-0.09375 -1.01953,-0.54297 -1.17578,-0.60156c-0.15625,-0.06641 -0.27344,-0.09375 -0.39062,0.08984c-0.11328,0.1875 -0.44141,0.60547 -0.54297,0.72656c-0.10156,0.125 -0.19922,0.14063 -0.37109,0.04688c-0.17578,-0.09375 -0.73047,-0.28906 -1.38672,-0.92187c-0.51172,-0.49219 -0.85937,-1.09766 -0.95703,-1.28516c-0.10156,-0.1875 -0.01172,-0.28516 0.07422,-0.375c0.07813,-0.08594 0.17188,-0.21875 0.25781,-0.32812c0.08594,-0.10547 0.11328,-0.1875 0.17188,-0.30859c0.05859,-0.125 0.03125,-0.23437 -0.01172,-0.32422c-0.04687,-0.09375 -0.39062,-1.00781 -0.53125,-1.37891c-0.14062,-0.35938 -0.28516,-0.3125 -0.39062,-0.31641c-0.09766,-0.00781 -0.21484,-0.00781 -0.32812,-0.00781z"></path></g></g>
-                    </svg>
-                    +549 11 3645-6799
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256"
-                    style="fill:#FFFFFF;">
-                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(16,16)"><path d="M4.77344,1c-2.07812,0 -3.77344,1.69531 -3.77344,3.77344v5.45703c0,2.07422 1.69531,3.76953 3.77344,3.76953h5.45703c2.07422,0 3.76953,-1.69531 3.76953,-3.77344v-5.45313c0,-2.07812 -1.69531,-3.77344 -3.77344,-3.77344zM4.77344,2h5.45313c1.53906,0 2.77344,1.23438 2.77344,2.77344v5.45313c0,1.53906 -1.23437,2.77344 -2.76953,2.77344h-5.45703c-1.53906,0 -2.77344,-1.23437 -2.77344,-2.76953v-5.45703c0,-1.53906 1.23438,-2.77344 2.77344,-2.77344zM11.5,3c-0.27734,0 -0.5,0.22266 -0.5,0.5c0,0.27734 0.22266,0.5 0.5,0.5c0.27734,0 0.5,-0.22266 0.5,-0.5c0,-0.27734 -0.22266,-0.5 -0.5,-0.5zM7.5,4c-1.92578,0 -3.5,1.57422 -3.5,3.5c0,1.92578 1.57422,3.5 3.5,3.5c1.92578,0 3.5,-1.57422 3.5,-3.5c0,-1.92578 -1.57422,-3.5 -3.5,-3.5zM7.5,5c1.38672,0 2.5,1.11328 2.5,2.5c0,1.38672 -1.11328,2.5 -2.5,2.5c-1.38672,0 -2.5,-1.11328 -2.5,-2.5c0,-1.38672 1.11328,-2.5 2.5,-2.5z"></path></g></g>
-                    </svg>
-                    /estudiocreativo737
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 64 64"
-                    style="fill:#FFFFFF;">
-                    <path d="M55,10H9c-2.209,0-4,1.791-4,4v34c0,2.209,1.791,4,4,4h46c2.209,0,4-1.791,4-4V14C59,11.791,57.209,10,55,10z M55,45.738 C54.954,47,53.901,48,52.618,48H49.5L51,21L32,33L13,22l1.5,26h-3.118C10.099,48,9.046,47,9,45.738V16.289 c0-1.25,1.03-2.263,2.3-2.263h1.2L32,29l19.5-14.974h1.2c1.27,0,2.3,1.013,2.3,2.263V45.738z"></path>
-                    </svg>
-                    737estudiocreativo@gmail.com
-                </li>
-            </ul>
-        </div>
-    </footer>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <h4 class="footer-title">Contacto</h4>
+            <div class="footer__div">
+                <img src="./assets/img/737logo.png" alt="footer-logo" class="footer__div-logo">
+                <ul class="footer__div-links">
+                    <li>
+                        <img src="./assets/img/icon-wsap.png" alt="wsap-logo">
+                        +54 9 11 3645-6799
+                    </li>
+                    <li>
+                        <img src="./assets/img/icon-gmail.png" alt="gmail-logo">
+                        737estudiocreativo@gmail.com
+                    </li>
+                    <li>
+                        <img src="./assets/img/icon-instagram.png" alt="ig-logo">
+                        /estudiocreativo737
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
