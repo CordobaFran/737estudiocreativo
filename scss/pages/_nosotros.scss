@@ -5,7 +5,7 @@ p {
     @include desktop-text ($desktop-s, $fontblack);
 }
 
-main {
+.main-nosotros {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     

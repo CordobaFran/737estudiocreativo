@@ -26,7 +26,14 @@ $mobile-s : 14px;
 @mixin desktop-title ( $color ) {
     font-family: "Rubik Dirt", system-ui;
     font-weight: 100;
-    font-size: 64;
+    font-size: 64px;
+    color: $color;
+}
+
+@mixin desktop-subtitle ( $color ) {
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 100;
+    font-size: 48px;
     color: $color;
 }
 

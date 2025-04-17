@@ -3,9 +3,11 @@
 @use "./base/reset";
 @use "./base/typography";
 
+@use "./components/card";
 
 @use "./base/media";
 @use "./layout/header";
 @use "./layout/footer";
 
+@use "./pages/index";
 @use "./pages/nosotros"

@@ -1,0 +1,67 @@
+@use "../base/typography" as *;
+@use "../utilities/variables" as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.61);
+    width: 248px;
+    height: 350px;
+    margin: 0.5rem auto;
+    .card__div-img {
+        height: 224px;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+
+        .card-img-top {
+            width: 196px;
+            height: 196px;
+            object-fit: cover;
+        }
+    }
+
+    .card-img-top {
+        width: 196px;
+        height: 196px;
+        object-fit: cover;
+    }
+
+
+    .card-body{
+        display: grid;
+        width: 230px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr, 1fr;
+        grid-template-areas: 
+        "title title price"
+        "desc desc price"
+        ;
+        .card-title {
+            @include desktop-text($desktop-m, $fontblack);
+            grid-area: title;
+            height: 30px;
+            text-align: center;
+            align-content: center;
+            margin: auto auto;
+        }
+        .card-text {
+            grid-area: desc;
+            height: 56px;
+            line-height: 100%;
+            @include desktop-text($desktop-xs, $fontblack);
+            overflow: hidden;
+      }
+        .card-price {
+            grid-area: price;
+            @include desktop-text($desktop-m, $fontblack);
+            align-items: center;
+            margin: auto auto;
+        }
+    }
+
+}
