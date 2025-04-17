@@ -8,6 +8,7 @@ p {
 .main-nosotros {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    background-image: linear-gradient(to right top, #d1d7e0, #dddce5, #e8e2e9, #f2e8ec, #f9efef);
     
     .container__body {
         grid-column: 2/6 ;
